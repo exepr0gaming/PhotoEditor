@@ -11,6 +11,11 @@
 		84E2E0702A75DA22004ABF81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2E06F2A75DA22004ABF81 /* ContentView.swift */; };
 		84E2E0722A75DA24004ABF81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E2E0712A75DA24004ABF81 /* Assets.xcassets */; };
 		84E2E0762A75DA24004ABF81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E2E0752A75DA24004ABF81 /* Preview Assets.xcassets */; };
+		84E2E07E2A75DA8E004ABF81 /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 84E2E07D2A75DA8E004ABF81 /* CropViewController */; };
+		84E2E0802A76B996004ABF81 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2E07F2A76B996004ABF81 /* MainView.swift */; };
+		84E2E0822A76BA11004ABF81 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2E0812A76BA11004ABF81 /* ImagePicker.swift */; };
+		84E2E0842A76D401004ABF81 /* DrawingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2E0832A76D401004ABF81 /* DrawingViewModel.swift */; };
+		84E2E0862A76DC78004ABF81 /* DrawingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2E0852A76DC78004ABF81 /* DrawingScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,10 @@
 		84E2E0712A75DA24004ABF81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84E2E0732A75DA24004ABF81 /* PhotoEditor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhotoEditor.entitlements; sourceTree = "<group>"; };
 		84E2E0752A75DA24004ABF81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		84E2E07F2A76B996004ABF81 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		84E2E0812A76BA11004ABF81 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		84E2E0832A76D401004ABF81 /* DrawingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModel.swift; sourceTree = "<group>"; };
+		84E2E0852A76DC78004ABF81 /* DrawingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E2E07E2A75DA8E004ABF81 /* CropViewController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +64,10 @@
 			children = (
 				84E2E06D2A75DA22004ABF81 /* PhotoEditorApp.swift */,
 				84E2E06F2A75DA22004ABF81 /* ContentView.swift */,
+				84E2E07F2A76B996004ABF81 /* MainView.swift */,
+				84E2E0812A76BA11004ABF81 /* ImagePicker.swift */,
+				84E2E0852A76DC78004ABF81 /* DrawingScreenView.swift */,
+				84E2E0832A76D401004ABF81 /* DrawingViewModel.swift */,
 				84E2E0712A75DA24004ABF81 /* Assets.xcassets */,
 				84E2E0732A75DA24004ABF81 /* PhotoEditor.entitlements */,
 				84E2E0742A75DA24004ABF81 /* Preview Content */,
@@ -85,6 +99,9 @@
 			dependencies = (
 			);
 			name = PhotoEditor;
+			packageProductDependencies = (
+				84E2E07D2A75DA8E004ABF81 /* CropViewController */,
+			);
 			productName = PhotoEditor;
 			productReference = 84E2E06A2A75DA22004ABF81 /* PhotoEditor.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +130,9 @@
 				Base,
 			);
 			mainGroup = 84E2E0612A75DA22004ABF81;
+			packageReferences = (
+				84E2E07C2A75DA8E004ABF81 /* XCRemoteSwiftPackageReference "TOCropViewController" */,
+			);
 			productRefGroup = 84E2E06B2A75DA22004ABF81 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +160,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E2E0702A75DA22004ABF81 /* ContentView.swift in Sources */,
+				84E2E0822A76BA11004ABF81 /* ImagePicker.swift in Sources */,
+				84E2E0842A76D401004ABF81 /* DrawingViewModel.swift in Sources */,
+				84E2E0862A76DC78004ABF81 /* DrawingScreenView.swift in Sources */,
+				84E2E0802A76B996004ABF81 /* MainView.swift in Sources */,
 				84E2E06E2A75DA22004ABF81 /* PhotoEditorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +293,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to select photo";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -279,7 +304,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -287,7 +312,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.i0s-news.PhotoEditor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,6 +334,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to select photo";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -317,7 +345,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -325,7 +353,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.i0s-news.PhotoEditor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -354,6 +384,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84E2E07C2A75DA8E004ABF81 /* XCRemoteSwiftPackageReference "TOCropViewController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TimOliver/TOCropViewController";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84E2E07D2A75DA8E004ABF81 /* CropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84E2E07C2A75DA8E004ABF81 /* XCRemoteSwiftPackageReference "TOCropViewController" */;
+			productName = CropViewController;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84E2E0622A75DA22004ABF81 /* Project object */;
 }
